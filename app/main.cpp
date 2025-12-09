@@ -5,7 +5,8 @@ int main()
 {
     AnalogSensor lightSensor(5);
     std::cout << "Averaged sensor reading: " << lightSensor.Read() << std::endl;
-    bool terminator;
+    bool terminator{true}; // fixed initialization
+    // bool terminator; // buggy initialization
     if( terminator )
     {
         std::cout << "DONE" << std::endl;
